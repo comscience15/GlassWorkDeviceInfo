@@ -91,9 +91,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/GWPgkGames"
         android:layout_centerHorizontal="true"
-        android:text="Logcat feeding"
+        android:text=""
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold" /> 
 
     <TextView
         android:id="@+id/logcatFeed"
@@ -107,12 +107,22 @@
         android:textSize="9sp" />
 
     <Button
-        android:id="@+id/bShowLogcat"
+        android:id="@+id/emailLogcat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/showLogcat"
-        android:layout_centerHorizontal="true"
-        android:text="Logcat Feeding" 
-        android:onClick="buttonClick" />
+        android:layout_toRightOf="@+id/showLogcat"
+        android:layout_weight="0.97"
+        android:onClick="sendEmailClick"
+        android:text="Send Logcat" />
+
+    <Button
+        android:id="@+id/bShowLogcat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/logcatFeed"
+        android:layout_toLeftOf="@+id/showLogcat"
+        android:onClick="logcatViewClick"
+        android:text="Logcat Viewer" />
 
 </RelativeLayout>

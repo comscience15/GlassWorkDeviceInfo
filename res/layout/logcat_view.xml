@@ -3,10 +3,54 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    
-    <ListView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@android:id/list"/>
 
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent" />
+
+	<!--<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal" >
+	    
+	    <Button
+	        android:id="@+id/clearLogcat"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="0.97"
+	        android:text="Clear Logcat" 
+	        android:onClick="clearClick"/>
+	
+	    <Button
+	        android:id="@+id/saveLogcat"
+	        android:layout_width="134dp"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/clearLogcat"
+	        android:layout_weight="0.97"
+	        android:text="Save Logcat" 
+	        android:onClick="saveClick"/> 
+    </LinearLayout>-->
+    
+	<!--<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal" >
+	    <Button
+	        android:id="@+id/saveLogcat"
+	        android:layout_width="134dp"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/clearLogcat"
+	        android:layout_weight="0.97"
+	        android:text="Save Logcat" 
+	        android:onClick="saveClick"/>
+	    
+	    <Button
+	        android:id="@+id/emailLogcat"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="0.97"
+	        android:text="Email Logcat" 
+	        android:onClick="emailClick"/> 
+	</LinearLayout>-->
 </LinearLayout>

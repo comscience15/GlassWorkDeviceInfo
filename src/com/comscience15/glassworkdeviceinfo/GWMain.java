@@ -1,14 +1,9 @@
 package com.comscience15.glassworkdeviceinfo;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.text.method.ArrowKeyMovementMethod;
-import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
@@ -59,22 +54,17 @@ public class GWMain extends Activity {
 			}*/
 	}
 
-	public void buttonClick(View V){
-//		Log.i(TAG, "Button Clicked");	
-//		final TextView textView = (TextView) findViewById(R.id.textView);
-//		
-//		String text = textView.getText().toString();
-//		
-//		if (text.contains("World")){
-//			textView.setText("Hello Android!");
-//		}
-//		else {
-//			textView.setText("Hello World!");
-//		}
-		
+	public void logcatViewClick(View V){
 		Intent intent = new Intent(this, LogcatViewer.class);
-		intent.putExtra("screenText", "Hello World!");
+		//intent.putExtra("screenText", "Hello World!");
 		startActivity(intent);
+	}
+	
+	// send logcat button on main page
+	public void sendEmailClick(View v) {
+		Intent intent = new Intent(this, EmailSend.class);
+		startActivity(intent);
+		
 	}
 	
 	@Override

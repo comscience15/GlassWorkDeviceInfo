@@ -2,6 +2,7 @@ package com.comscience15.glassworkdeviceinfo;
 
 import java.util.ArrayList;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.List;
@@ -16,20 +17,21 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.ListView;
 import android.widget.ArrayAdapter;
 
-public class LogcatViewer extends ListActivity {
+public class LogcatViewer extends ListActivity{
 	private LogStringAdaptor adaptor = null;
 	private ArrayList<String> logarray = null;
 	private LogReaderTask logReaderTask = null;
+	Button bEmailLogcat, bClearLogcat, bSaveLogcat;
+	String toEmailPeople = "nsrileeannop@zynga.com";
 	
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.logcat_view);
-		
-		Intent intent = getIntent();
 		
 		logarray = new ArrayList<String>();
 		adaptor = new LogStringAdaptor(this, R.id.txtLogString, logarray);
@@ -39,6 +41,43 @@ public class LogcatViewer extends ListActivity {
 		logReaderTask = new LogReaderTask();
 		
 		logReaderTask.execute();
+
+		//Intent intent = getIntent();
+		/*try{
+			bClearLogcat.setOnClickListener(this);
+			bSaveLogcat.setOnClickListener(this);
+			bEmailLogcat.setOnClickListener(this);
+		}catch (NullPointerException e){
+			e.printStackTrace();
+		}*/
+	}
+	
+	public void emailClick(View v) {
+		/*switch(v.getId()){
+		case R.id.clearLogcat:
+			
+			break;
+		case R.id.emailLogcat:
+			Intent intentEmailSend = new Intent(this, sendEmail.class);
+			startActivity(intentEmailSend);
+			break;
+		case R.id.saveLogcat:
+			
+			break;
+		}*/
+		//Intent intent = new Intent(this, sendEmail.class);
+		Intent intent = new Intent(this, EmailSend.class);
+		startActivity(intent);
+		
+	}
+	public void clearClick(View v) {
+		
+	}
+	public void saveClick(View v) {
+		/*String fileName = "logcat_"+System.currentTimeMillis()+".txt";
+	    File outputFile = new File(context.getExternalCacheDir(),fileName);
+	    @SuppressWarnings("unused")
+	    Process process = Runtime.getRuntime().exec("logcat -f "+outputFile.getAbsolutePath());*/
 	}
 	
 	@Override
@@ -182,5 +221,11 @@ public class LogcatViewer extends ListActivity {
 			isRunning = false;
 			logprocess.destroy();
 		}
+	}
+	@Override
+	protected void onPause() {
+		// TODO Auto-generated method stub
+		super.onPause();
+		finish();
 	}
 }
