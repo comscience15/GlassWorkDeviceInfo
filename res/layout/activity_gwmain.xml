@@ -67,16 +67,6 @@
         android:textStyle="italic" />
 
     <TextView
-        android:id="@+id/showGlassworkPgkNames"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/deviceOS"
-        android:layout_centerHorizontal="true"
-        android:text="GlassWork Games on Device"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <TextView
         android:id="@+id/GWPgkGames"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -106,23 +96,42 @@
         android:minHeight="200dp"
         android:textSize="9sp" />
 
-    <Button
-        android:id="@+id/emailLogcat"
+    <ListView
+        android:id="@+id/applist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/showLogcat"
-        android:layout_toRightOf="@+id/showLogcat"
-        android:layout_weight="0.97"
-        android:onClick="sendEmailClick"
-        android:text="Send Logcat" />
+        android:layout_alignTop="@+id/GWPgkGames" />
 
     <Button
         android:id="@+id/bShowLogcat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/logcatFeed"
-        android:layout_toLeftOf="@+id/showLogcat"
+        android:layout_alignBaseline="@+id/emailLogcat"
+        android:layout_alignBottom="@+id/emailLogcat"
+        android:layout_alignLeft="@+id/applist"
         android:onClick="logcatViewClick"
         android:text="Logcat Viewer" />
+
+    <Button
+        android:id="@+id/emailLogcat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/applist"
+        android:layout_alignTop="@+id/deviceOS"
+        android:layout_marginTop="16dp"
+        android:layout_weight="0.97"
+        android:onClick="sendEmailClick"
+        android:text="Send Logcat" />
+
+    <TextView
+        android:id="@+id/showGlassworkPgkNames"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bShowLogcat"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:text="GlassWork Games on Device"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

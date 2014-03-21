@@ -8,6 +8,18 @@
 	<string name="select_app">"Please select app for sending locat to</string>
 	<string name="retriving_log_fail">"FAIL!! Unable to retrive logcat"</string>
 	<string name="email_subject">Logcat attached</string>
+	<string name="appicon">Application Icon</string>
+    <string name="apkname">Application Name:</string>
+    <string name="package_name">Package Name:</string>
+    <string name="version">Version:</string>
+    <string name="features">Required Features:</string>
+    <string name="permissions">Required Permissions:</string>
+    <string name="req_version">Taget SDK Version:</string>
+    <string name="path_info">Path Info:</string>
+    <string name="appsize">Physical Size</string>
+    <string name="installed">Installed:</string>
+    <string name="modified">Last Modified:</string>
+    
 	<!--  <string name="device_info_fmt">
 Log Collector version: <xliff:g id="application_version">%s</xliff:g>\n
 Device model: <xliff:g id="device_model">%s</xliff:g>\n
