@@ -8,8 +8,11 @@ import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.pm.FeatureInfo;
 import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.comscience15.glassworkdeviceinfo.R;
@@ -19,9 +22,10 @@ import com.comscience15.glassworkdeviceinfo.app.AppData;
 @SuppressLint("NewApi")
 public class ApkInfo extends Activity {
  
-    TextView appLabel, packageName, version, features;
-    TextView permissions, andVersion, installed, lastModify, path;
+    TextView appLabel, packageName, version, features, permissions, andVersion, installed, lastModify, path;
+//    ImageView appicon;
     PackageInfo packageInfo;
+    PackageManager pm;
  
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -38,7 +42,8 @@ public class ApkInfo extends Activity {
     }
  
     private void findViewsById() {
-        appLabel = (TextView) findViewById(R.id.applabel);
+//    	appicon = (ImageView) findViewById(R.id.appiconimage);
+    	appLabel = (TextView) findViewById(R.id.applabel);
         packageName = (TextView) findViewById(R.id.package_name);
         version = (TextView) findViewById(R.id.version_name);
         features = (TextView) findViewById(R.id.req_feature);
@@ -51,7 +56,10 @@ public class ApkInfo extends Activity {
     
     @SuppressLint("NewApi")
     private void setValues() {
-        // APP name
+        // app icon
+//    	Drawable appIcon = pm.getApplicationIcon(packageInfo.applicationInfo);
+    	
+    	// APP name
         appLabel.setText(getPackageManager().getApplicationLabel(
                 packageInfo.applicationInfo));
  

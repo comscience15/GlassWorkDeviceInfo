@@ -254,14 +254,14 @@
         android:textSize="10sp"
         android:textStyle="italic" />
 
-    <TextView
+    <!-- <TextView
         android:id="@+id/GWPgkGames"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/bShowLogcat"
         android:layout_centerHorizontal="true"
         android:textSize="12sp"
-        android:textStyle="italic" />
+        android:textStyle="italic" />  --> 
 
     <TextView
         android:id="@+id/showLogcat"
@@ -286,8 +286,8 @@
         android:id="@+id/showGlassworkPgkNames"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/emailLogcat"
         android:layout_alignParentRight="true"
-        android:layout_toRightOf="@+id/GWPgkGames"
         android:text="Zynga Games list"
         android:textSize="15sp"
         android:textStyle="bold" />
@@ -297,7 +297,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/bShowLogcat"
-        android:layout_alignLeft="@+id/GWPgkGames"
+        android:layout_alignLeft="@+id/logcatFeed"
         android:layout_below="@+id/showGlassworkPgkNames" />
 
     <Button

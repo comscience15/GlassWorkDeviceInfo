@@ -159,7 +159,7 @@ public class LogcatViewer extends ListActivity{
 	}
 	
 	private class LogReaderTask extends AsyncTask<Void, String, Void> {
-		private final String[] LOGCAT_CMD = new String[] { "logcat" };
+		private final String LOGCAT_CMD = new String("logcat -v time");
 		private final int BUFFER_SIZE = 1024;
 		private boolean isRunning = true;
 		private Process logprocess = null;
