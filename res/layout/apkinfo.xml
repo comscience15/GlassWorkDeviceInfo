@@ -6,25 +6,26 @@
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" >
-         
+ 
         <TextView
             android:id="@+id/apk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/appiconimage"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
             android:layout_marginLeft="18dp"
-            android:layout_marginTop="10dp"
-            android:textSize="15sp"
+            android:layout_marginTop="24dp"
             android:text="@string/apkname"
-            android:textStyle="bold" />
+            android:textStyle="bold" 
+            android:textSize="15sp"/>
  
         <TextView
             android:id="@+id/applabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/apk"
-            android:paddingLeft="24dp" 
-            android:textSize="12sp"/>
+            android:paddingLeft="24dp"
+            android:textSize="12sp" />
  
         <TextView
             android:id="@+id/pack_name"

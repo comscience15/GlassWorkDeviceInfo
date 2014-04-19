@@ -165,9 +165,9 @@ public class EmailSend extends Activity{
             try{
                 ArrayList<String> commandLine = new ArrayList<String>();
                 commandLine.add("logcat");
-//                commandLine.add("-d");
-                commandLine.add("-v");
-                commandLine.add("time");
+                commandLine.add("-d");
+//                commandLine.add("-v");
+//                commandLine.add("time");
                 ArrayList<String> arguments = ((params != null) && (params.length > 0)) ? params[0] : null;
                 if (null != arguments){
                     commandLine.addAll(arguments);
