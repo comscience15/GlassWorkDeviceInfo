@@ -5,7 +5,7 @@
 
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="460dp" >
  
         <TextView
             android:id="@+id/apk"
@@ -178,6 +178,16 @@
             android:layout_below="@+id/modified"
             android:paddingLeft="24dp" 
             android:textSize="12sp"/>
+
+        <Button
+            android:id="@+id/lApp"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/applabel"
+            android:layout_toRightOf="@+id/and_version"
+            android:onClick="launchAppClick"
+            android:text="Launch App" />
 
     </RelativeLayout>
  

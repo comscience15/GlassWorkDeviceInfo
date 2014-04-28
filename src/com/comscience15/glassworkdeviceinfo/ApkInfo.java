@@ -3,15 +3,21 @@ package com.comscience15.glassworkdeviceinfo;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import javax.microedition.khronos.opengles.GL10;
+
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Intent;
 import android.content.pm.FeatureInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -26,6 +32,7 @@ public class ApkInfo extends Activity {
 //    ImageView appicon;
     PackageInfo packageInfo;
     PackageManager pm;
+    Button bLaunchApp;
  
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -52,6 +59,7 @@ public class ApkInfo extends Activity {
         path = (TextView) findViewById(R.id.path);
         installed = (TextView) findViewById(R.id.insdate);
         lastModify = (TextView) findViewById(R.id.last_modify);
+        bLaunchApp = (Button) findViewById(R.id.lApp);
     }
     
     @SuppressLint("NewApi")
@@ -121,4 +129,16 @@ public class ApkInfo extends Activity {
         }
         return features;
     }
+    
+    //launch App
+    public void launchAppClick(View V){
+    	String appName = (String) packageInfo.packageName;
+    	Log.d("COMSCIENCE15", "App Name is: " + appName);
+    	PackageManager manager = getPackageManager();
+		Intent intent = new Intent(Intent.ACTION_MAIN);
+		intent = manager.getLaunchIntentForPackage(appName);
+		intent.addCategory(Intent.CATEGORY_LAUNCHER);
+		startActivity(intent);
+	}
+    
 }

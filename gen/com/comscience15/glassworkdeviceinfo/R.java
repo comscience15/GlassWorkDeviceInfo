@@ -25,15 +25,15 @@ public final class R {
     }
     public static final class id {
         public static final int GWPgkGames=0x7f08001a;
-        public static final int action_settings=0x7f080039;
-        public static final int analogClock1=0x7f080037;
+        public static final int action_settings=0x7f08003a;
+        public static final int analogClock1=0x7f080038;
         public static final int and_version=0x7f08002c;
         public static final int andversion=0x7f08002d;
         public static final int apk=0x7f080020;
         public static final int applabel=0x7f080021;
         public static final int applist=0x7f080000;
-        public static final int appname=0x7f080032;
-        public static final int bSentEmail=0x7f080036;
+        public static final int appname=0x7f080033;
+        public static final int bSentEmail=0x7f080037;
         public static final int bShowLogcat=0x7f08001b;
         public static final int deviceBoard=0x7f080009;
         public static final int deviceBootLoader=0x7f08000b;
@@ -48,12 +48,13 @@ public final class R {
         public static final int deviceOS=0x7f080007;
         public static final int deviceSerial=0x7f080019;
         public static final int emailLogcat=0x7f08001f;
-        public static final int etContent=0x7f080035;
-        public static final int etEmails=0x7f080033;
-        public static final int etSubject=0x7f080034;
+        public static final int etContent=0x7f080036;
+        public static final int etEmails=0x7f080034;
+        public static final int etSubject=0x7f080035;
         public static final int features=0x7f080026;
         public static final int insdate=0x7f08002f;
         public static final int installed=0x7f08002e;
+        public static final int lApp=0x7f080032;
         public static final int last_modify=0x7f080031;
         public static final int logcatFeed=0x7f08001d;
         public static final int modified=0x7f080030;
@@ -79,7 +80,7 @@ public final class R {
         public static final int showModel=0x7f080004;
         public static final int showOS=0x7f080006;
         public static final int showSerial=0x7f080018;
-        public static final int txtLogString=0x7f080038;
+        public static final int txtLogString=0x7f080039;
         public static final int version=0x7f080024;
         public static final int version_name=0x7f080025;
     }
