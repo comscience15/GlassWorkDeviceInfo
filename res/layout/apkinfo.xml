@@ -184,8 +184,9 @@
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/applabel"
-            android:layout_toRightOf="@+id/and_version"
+            android:layout_alignBaseline="@+id/apk"
+            android:layout_alignBottom="@+id/apk"
+            android:layout_alignParentRight="true"
             android:onClick="launchAppClick"
             android:text="Launch App" />
 

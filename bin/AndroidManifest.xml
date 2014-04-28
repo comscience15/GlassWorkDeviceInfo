@@ -67,6 +67,12 @@
 				<category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity 
+            android:name="SplashScreen">
+            <intent-filter>
+                <action android:name="com.comscience15.glassworkdeviceinfo.SplashScreen" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

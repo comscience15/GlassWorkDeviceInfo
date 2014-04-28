@@ -130,7 +130,7 @@ public class ApkInfo extends Activity {
         return features;
     }
     
-    //launch App
+    //launch selected App
     public void launchAppClick(View V){
     	String appName = (String) packageInfo.packageName;
     	Log.d("COMSCIENCE15", "App Name is: " + appName);

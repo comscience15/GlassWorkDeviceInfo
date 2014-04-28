@@ -286,9 +286,8 @@
         android:id="@+id/showGlassworkPgkNames"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/emailLogcat"
         android:layout_alignParentRight="true"
-        android:text="Zynga Games list"
+        android:text="Installed Application list"
         android:textSize="15sp"
         android:textStyle="bold" />
     

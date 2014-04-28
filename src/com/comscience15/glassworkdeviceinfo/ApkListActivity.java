@@ -12,6 +12,8 @@ import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
@@ -34,12 +36,16 @@ public class ApkListActivity extends Activity
                 .getInstalledPackages(PackageManager.GET_PERMISSIONS);
  
         List<PackageInfo> packageList1 = new ArrayList<PackageInfo>();
- 
+        
         /*To filter out System apps*/
         for(PackageInfo pi : packageList) {
-            boolean b = isSystemPackage(pi);
-            if(!b) {
-                packageList1.add(pi);
+//        	String pkg = pi.packageName;
+        	boolean a = zyngaAppOrNot(pi);
+//            boolean b = isSystemPackage(pi);
+//            if(!b) {
+//            	if (pkg.substring(0,9).startsWith("com.zynga"))
+        	  if(a=true){
+            		packageList1.add(pi);
             }
         }
         apkList = (ListView) findViewById(R.id.applist);
@@ -47,18 +53,33 @@ public class ApkListActivity extends Activity
  
         apkList.setOnItemClickListener(this);
     }
- 
-     /**
+
+	/**
      * Return whether the given PackgeInfo represents a system package or not.
      * User-installed packages (Market or otherwise) should not be denoted as
      * system packages.
-     *
      * @param pkgInfo
      * @return boolean
      */
-    private boolean isSystemPackage(PackageInfo pkgInfo) {
-        return ((pkgInfo.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM) != 0) ? true
-                : false;
+//    private boolean isSystemPackage(PackageInfo pkgInfo) {
+//        return (((pkgInfo.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM) != 0)) ? true
+//                : false;
+//    }
+    
+    private boolean zyngaAppOrNot(PackageInfo pkgInfo){
+    	PackageManager pm = getPackageManager();
+    	String zyngaApp = pkgInfo.packageName;
+    	String result = zyngaApp.substring(0, 9);
+    	boolean zyngaApp_installed = false;
+    	try{
+    		if (result.equals("com.zynga")){
+	    		pm.getPackageInfo(result, PackageManager.GET_ACTIVITIES);
+	    		zyngaApp_installed = true;
+    		}
+    	}catch (PackageManager.NameNotFoundException e){
+    		zyngaApp_installed = false;
+    	}
+    	return zyngaApp_installed;
     }
  
     @Override
