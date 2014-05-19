@@ -65,7 +65,7 @@
             android:paddingLeft="24dp"  
             android:textSize="12sp"/>
  
-        <TextView
+<!--         <TextView
             android:id="@+id/features"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -82,32 +82,32 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/features"
             android:paddingLeft="24dp" 
-            android:textSize="12sp"/>
+            android:textSize="12sp"/>   -->
  
-        <TextView
-            android:id="@+id/permissions"
+ 		<TextView
+            android:id="@+id/and_version"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/req_feature"
+            android:layout_below="@+id/version_name"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="18dp"
-            android:text="@string/permissions"
+            android:text="@string/req_version"
             android:textStyle="bold" 
             android:textSize="15sp"/>
  
         <TextView
-            android:id="@+id/req_permission"
+            android:id="@+id/andversion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/permissions"
-            android:paddingLeft="24dp" 
+            android:layout_below="@+id/and_version"
+            android:paddingLeft="24dp"  
             android:textSize="12sp"/>
  
-        <TextView
+ 		<TextView
             android:id="@+id/path_info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/req_permission"
+            android:layout_below="@+id/andversion"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="18dp"
             android:text="@string/path_info"
@@ -123,29 +123,29 @@
             android:textSize="12sp"/>
  
         <TextView
-            android:id="@+id/and_version"
+            android:id="@+id/permissions"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/path"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="18dp"
-            android:text="@string/req_version"
+            android:text="@string/permissions"
             android:textStyle="bold" 
             android:textSize="15sp"/>
  
         <TextView
-            android:id="@+id/andversion"
+            android:id="@+id/req_permission"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/and_version"
-            android:paddingLeft="24dp"  
+            android:layout_below="@+id/permissions"
+            android:paddingLeft="24dp" 
             android:textSize="12sp"/>
  
         <TextView
             android:id="@+id/installed"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/andversion"
+            android:layout_below="@+id/req_permission"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="18dp"
             android:text="@string/installed"
@@ -178,7 +178,7 @@
             android:layout_below="@+id/modified"
             android:paddingLeft="24dp" 
             android:textSize="12sp"/>
-
+        
         <Button
             android:id="@+id/lApp"
             style="?android:attr/buttonStyleSmall"
@@ -190,6 +190,45 @@
             android:onClick="launchAppClick"
             android:text="Launch App" />
 
+       <!--  <Button
+            android:id="@+id/lSS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/version"
+            android:layout_alignLeft="@+id/lApp"
+            android:layout_alignParentRight="true"
+            android:onClick="launchAndSSClick"
+            android:text="Launch &amp; SS" 
+            android:textSize="12sp" />  
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="50dp"
+            android:layout_height="70dp"
+            android:layout_alignBottom="@+id/req_feature"
+            android:layout_alignLeft="@+id/lSS"
+            android:layout_alignTop="@+id/version" /> -->
+
+        <Button
+            android:id="@+id/resetBlob"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/version"
+            android:layout_alignParentRight="true"
+            android:onClick="ResetUserBlob"
+            android:text="Reset Blob" />
+
+        <Button
+            android:id="@+id/emailBlob"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/resetBlob"
+            android:onClick="emailBlob"
+            android:text="Email Blob" />
+        
     </RelativeLayout>
  
 </ScrollView>

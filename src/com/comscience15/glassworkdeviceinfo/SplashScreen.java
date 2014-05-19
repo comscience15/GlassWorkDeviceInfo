@@ -18,6 +18,7 @@ import android.content.pm.PackageManager;
 import android.opengl.GLSurfaceView;
 import android.opengl.GLSurfaceView.Renderer;
 import android.os.Bundle;
+import android.os.Debug;
 import android.text.method.ArrowKeyMovementMethod;
 import android.util.Log;
 import android.view.Menu;
@@ -33,7 +34,8 @@ public class SplashScreen extends Activity implements OnItemClickListener{
 	
 	
 	private TextView DVBrand, DVModel, DVAndroidOS, DVPgkGames, DVLogcat, DVBoard, DVBootLoader,DVCPUabi,DVCPUabi2, DVDisplay, DVGL_Renderer, DVGL_Vendor,DVGL_Version, DVGL_Extensions, DVSerial, 
-	DVBrand_edt,DVModel_edt, DVAndroidOS_edt, DVPgkGames_edt, DVLogcat_edt, DVBoard_edt, DVBootLoader_edt, DVCPUabi_edt, DVCPUabi2_edt, DVDisplay_edt, DVGL_Renderer_edt, DVGL_Vendor_edt, DVGL_Version_edt, DVGL_Extensions_edt, DVSerial_edt;
+	DVBrand_edt,DVModel_edt, DVAndroidOS_edt, DVPgkGames_edt, DVLogcat_edt, DVBoard_edt, DVBootLoader_edt, DVCPUabi_edt, DVCPUabi2_edt, DVDisplay_edt, DVGL_Renderer_edt, DVGL_Vendor_edt, 
+	DVGL_Version_edt, DVGL_Extensions_edt, DVSerial_edt, vmHeapSize, vmAllocatedMem, vmHeapLimit, nativeAllocatedMem;
 	private GLSurfaceView glSurfaceView;
 	private String glVendor1, glRenderer1, glVersion1;
 	private RelativeLayout rlLayout;
@@ -134,6 +136,21 @@ public class SplashScreen extends Activity implements OnItemClickListener{
 	//	DVSerial_edt.setTextColor(Color.GREEN);
 		DVSerial_edt.setText(android.os.Build.SERIAL);
 		
+		vmHeapSize = (TextView) findViewById(R.id.vmheap);
+        vmAllocatedMem = (TextView) findViewById(R.id.vmAllocated);
+		vmHeapLimit = (TextView) findViewById(R.id.vmHeapLimit);
+		nativeAllocatedMem = (TextView) findViewById(R.id.nativeAllocatedMem);
+		
+		//VM Heap Size, VM Allocated, VM Allocated limit, Native Allocated Memnory
+        long vmAlloc =  Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
+        long nativeAlloc = Debug.getNativeHeapAllocatedSize();
+        
+        vmHeapSize.setText(formatMemoeryText(Runtime.getRuntime().totalMemory()));
+        vmAllocatedMem.setText(formatMemoeryText(vmAlloc));
+        vmHeapLimit.setText(formatMemoeryText(nativeAlloc+vmAlloc));
+        nativeAllocatedMem.setText(formatMemoeryText(nativeAlloc));
+		
+		
 		DVLogcat = (TextView) findViewById(R.id.showLogcat);
 		DVLogcat_edt = (TextView) findViewById(R.id.logcatFeed);
 		DVLogcat_edt.setMovementMethod(ArrowKeyMovementMethod.getInstance());
@@ -174,6 +191,13 @@ public class SplashScreen extends Activity implements OnItemClickListener{
 			}*/
 	}
 	
+	@SuppressLint("DefaultLocale")
+	private String formatMemoeryText(long memory) {
+		// TODO Auto-generated method stub
+    	float memoryInMB = memory * 1f / 1024 / 1024;
+		return String.format("%.1f MB", memoryInMB);
+	}
+
 	/*
 	 * Return whether the given PackgeInfo represents a system package or not.
 	 * User-installed packages (Market or otherwise) should not be denoted as
@@ -183,8 +207,7 @@ public class SplashScreen extends Activity implements OnItemClickListener{
 	 * @return boolean
 	 */
 	private boolean isSystemPackage(PackageInfo pkgInfo) {
-	    return ((pkgInfo.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM) != 0) ? true
-	            : false;
+	    return ((pkgInfo.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM) != 0) ? true: false;
 	}
 	
 	public void onItemClick(AdapterView<?> parent, View view, int position,
@@ -207,7 +230,6 @@ public class SplashScreen extends Activity implements OnItemClickListener{
 	public void sendEmailClick(View v) {
 		Intent intent = new Intent(this, EmailSend.class);
 		startActivity(intent);
-		
 	}
 	
 	public void showZGames(View v) {
@@ -229,4 +251,15 @@ public class SplashScreen extends Activity implements OnItemClickListener{
 		getMenuInflater().inflate(R.menu.gwmain, menu);
 		return true;
 	}
+
+	@Override
+	protected void onDestroy() {
+		// TODO Auto-generated method stub
+		super.onDestroy();
+//		if(quit){
+//			android.os.Process.killProcess(android.os.Process.myPid());
+//		}
+	}
+	
+	
 }

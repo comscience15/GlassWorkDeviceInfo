@@ -3,8 +3,10 @@ package com.comscience15.glassworkdeviceinfo.adapter;
 import java.util.List;
 
 import android.app.Activity;
+import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +20,7 @@ public class ApkAdapter extends BaseAdapter {
     List<PackageInfo> packageList;
     Activity context;
     PackageManager packageManager;
+    ApplicationInfo appPgk;
  
     public ApkAdapter(Activity context, List<PackageInfo> packageList,
             PackageManager packageManager) {
@@ -59,15 +62,32 @@ public class ApkAdapter extends BaseAdapter {
         }
  
         PackageInfo packageInfo = (PackageInfo) getItem(position);
-        Drawable appIcon = packageManager
-                .getApplicationIcon(packageInfo.applicationInfo);
-        String appName = packageManager.getApplicationLabel(
-                packageInfo.applicationInfo).toString();
+        Drawable appIcon = packageManager.getApplicationIcon(packageInfo.applicationInfo);
+        String appName = packageManager.getApplicationLabel(packageInfo.applicationInfo).toString();
+        
+        //try to get only Zynga apps
+        String appPgk = (String) packageInfo.packageName;
+        
         appIcon.setBounds(0, 0, 40, 40);
         holder.apkName.setCompoundDrawables(appIcon, null, null, null);
         holder.apkName.setCompoundDrawablePadding(15);
         holder.apkName.setText(appName);
- 
+        
+        //TODO trying to display only Zynga apps
+//        if (appPgk.substring(0, 9).equals("com.zynga")){
+//        	System.out.println(appName);
+//            System.out.println(appPgk);
+//            appIcon.setBounds(0, 0, 40, 40);
+//            holder.apkName.setCompoundDrawables(appIcon, null, null, null);
+//            holder.apkName.setCompoundDrawablePadding(15);
+//            holder.apkName.setText(appName);
+//        }
         return convertView;
     }
+//
+//	private CharSequence zyngaApps() {
+//		// TODO Auto-generated method stub
+//		
+//		return null;
+//	}
 }

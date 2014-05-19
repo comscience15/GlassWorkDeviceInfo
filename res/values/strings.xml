@@ -20,6 +20,10 @@
     <string name="appsize">Physical Size</string>
     <string name="installed">Installed:</string>
     <string name="modified">Last Modified:</string>
+    <string name="vm_heap_size">VM Heap Size:</string>
+    <string name="allocated_vm_memory">Allocated VM Memory:</string>
+    <string name="vm_heap_size_limit">VM Heap Size Total:</string>
+    <string name="native_allocated_memory">Native Allocated Memory:</string>
     
 	<!--  <string name="device_info_fmt">
 Log Collector version: <xliff:g id="application_version">%s</xliff:g>\n

@@ -27,20 +27,22 @@ public final class R {
     public static final class drawable {
         public static final int android=0x7f020000;
         public static final int android1=0x7f020001;
-        public static final int ic_launcher=0x7f020002;
+        public static final int glassworksdeviceinfo=0x7f020002;
+        public static final int glassworksdeviceinfo1=0x7f020003;
+        public static final int ic_launcher=0x7f020004;
     }
     public static final class id {
-        public static final int GWPgkGames=0x7f09001a;
-        public static final int action_settings=0x7f09003b;
-        public static final int analogClock1=0x7f090039;
-        public static final int and_version=0x7f09002d;
-        public static final int andversion=0x7f09002e;
-        public static final int apk=0x7f090021;
-        public static final int applabel=0x7f090022;
+        public static final int GWPgkGames=0x7f090022;
+        public static final int action_settings=0x7f090043;
+        public static final int analogClock1=0x7f090041;
+        public static final int and_version=0x7f09002f;
+        public static final int andversion=0x7f090030;
+        public static final int apk=0x7f090029;
+        public static final int applabel=0x7f09002a;
         public static final int applist=0x7f090000;
-        public static final int appname=0x7f090034;
-        public static final int bSentEmail=0x7f090038;
-        public static final int bShowLogcat=0x7f09001b;
+        public static final int appname=0x7f09003c;
+        public static final int bSentEmail=0x7f090040;
+        public static final int bShowLogcat=0x7f090023;
         public static final int deviceBoard=0x7f090009;
         public static final int deviceBootLoader=0x7f09000b;
         public static final int deviceBrand=0x7f090003;
@@ -53,25 +55,27 @@ public final class R {
         public static final int deviceModel=0x7f090005;
         public static final int deviceOS=0x7f090007;
         public static final int deviceSerial=0x7f090019;
-        public static final int emailLogcat=0x7f09001f;
-        public static final int etContent=0x7f090037;
-        public static final int etEmails=0x7f090035;
-        public static final int etSubject=0x7f090036;
-        public static final int features=0x7f090027;
-        public static final int insdate=0x7f090030;
-        public static final int installed=0x7f09002f;
-        public static final int lApp=0x7f090033;
-        public static final int last_modify=0x7f090032;
-        public static final int lin_lay=0x7f090020;
-        public static final int logcatFeed=0x7f09001d;
-        public static final int modified=0x7f090031;
-        public static final int pack_name=0x7f090023;
-        public static final int package_name=0x7f090024;
-        public static final int path=0x7f09002c;
-        public static final int path_info=0x7f09002b;
-        public static final int permissions=0x7f090029;
-        public static final int req_feature=0x7f090028;
-        public static final int req_permission=0x7f09002a;
+        public static final int emailBlob=0x7f09003b;
+        public static final int emailLogcat=0x7f090027;
+        public static final int etContent=0x7f09003f;
+        public static final int etEmails=0x7f09003d;
+        public static final int etSubject=0x7f09003e;
+        public static final int insdate=0x7f090036;
+        public static final int installed=0x7f090035;
+        public static final int lApp=0x7f090039;
+        public static final int last_modify=0x7f090038;
+        public static final int lin_lay=0x7f090028;
+        public static final int logcatFeed=0x7f090025;
+        public static final int modified=0x7f090037;
+        public static final int nativeAllocatedMem=0x7f090021;
+        public static final int nativeAllocatedMem_name=0x7f090020;
+        public static final int pack_name=0x7f09002b;
+        public static final int package_name=0x7f09002c;
+        public static final int path=0x7f090032;
+        public static final int path_info=0x7f090031;
+        public static final int permissions=0x7f090033;
+        public static final int req_permission=0x7f090034;
+        public static final int resetBlob=0x7f09003a;
         public static final int rlLayout=0x7f090001;
         public static final int showBoard=0x7f090008;
         public static final int showBootLoader=0x7f09000a;
@@ -82,14 +86,20 @@ public final class R {
         public static final int showGLRenderer=0x7f090012;
         public static final int showGLVendor=0x7f090014;
         public static final int showGLVersion=0x7f090016;
-        public static final int showGlassworkPgkNames=0x7f09001e;
-        public static final int showLogcat=0x7f09001c;
+        public static final int showGlassworkPgkNames=0x7f090026;
+        public static final int showLogcat=0x7f090024;
         public static final int showModel=0x7f090004;
         public static final int showOS=0x7f090006;
         public static final int showSerial=0x7f090018;
-        public static final int txtLogString=0x7f09003a;
-        public static final int version=0x7f090025;
-        public static final int version_name=0x7f090026;
+        public static final int txtLogString=0x7f090042;
+        public static final int version=0x7f09002d;
+        public static final int version_name=0x7f09002e;
+        public static final int vmAllocated=0x7f09001d;
+        public static final int vmAllocated_name=0x7f09001c;
+        public static final int vmHeapLimit=0x7f09001f;
+        public static final int vmHeapLimit_name=0x7f09001e;
+        public static final int vmheap=0x7f09001b;
+        public static final int vmheap_name=0x7f09001a;
     }
     public static final class layout {
         public static final int activity_apklist=0x7f030000;
@@ -106,6 +116,7 @@ public final class R {
     }
     public static final class string {
         public static final int action_settings=0x7f060001;
+        public static final int allocated_vm_memory=0x7f060014;
         public static final int apkname=0x7f060009;
         public static final int app_name=0x7f060000;
         public static final int appicon=0x7f060008;
@@ -115,6 +126,7 @@ public final class R {
         public static final int hello_world=0x7f060002;
         public static final int installed=0x7f060011;
         public static final int modified=0x7f060012;
+        public static final int native_allocated_memory=0x7f060016;
         public static final int package_name=0x7f06000a;
         public static final int path_info=0x7f06000f;
         public static final int permissions=0x7f06000d;
@@ -124,6 +136,8 @@ public final class R {
         public static final int select_app=0x7f060004;
         public static final int title_activity_apk_list=0x7f060006;
         public static final int version=0x7f06000b;
+        public static final int vm_heap_size=0x7f060013;
+        public static final int vm_heap_size_limit=0x7f060015;
     }
     public static final class style {
         /** 

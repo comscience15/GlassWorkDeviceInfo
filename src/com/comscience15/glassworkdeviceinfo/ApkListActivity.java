@@ -32,55 +32,50 @@ public class ApkListActivity extends Activity
         setContentView(R.layout.activity_apklist);
  
         packageManager = getPackageManager();
-        List<PackageInfo> packageList = packageManager
-                .getInstalledPackages(PackageManager.GET_PERMISSIONS);
+//        List<PackageInfo> packageList = packageManager
+//                .getInstalledPackages(PackageManager.GET_PERMISSIONS);
  
         List<PackageInfo> packageList1 = new ArrayList<PackageInfo>();
         
-        /*To filter out System apps*/
-        for(PackageInfo pi : packageList) {
-//        	String pkg = pi.packageName;
-        	boolean a = zyngaAppOrNot(pi);
-//            boolean b = isSystemPackage(pi);
-//            if(!b) {
-//            	if (pkg.substring(0,9).startsWith("com.zynga"))
-        	  if(a=true){
-            		packageList1.add(pi);
-            }
-        }
-        apkList = (ListView) findViewById(R.id.applist);
-        apkList.setAdapter(new ApkAdapter(this, packageList1, packageManager));
- 
-        apkList.setOnItemClickListener(this);
+//        /*To filter out System apps*/
+//        for(PackageInfo pi : packageList) {
+//        	boolean a = zyngaAppOrNot(pi);
+//        	  if(a=true){
+//            		packageList1.add(pi);
+//            }
+//        }
+        	apkList = (ListView) findViewById(R.id.applist);
+            apkList.setAdapter(new ApkAdapter(this, packageList1, packageManager));
+            apkList.setOnItemClickListener(this);
     }
 
-	/**
-     * Return whether the given PackgeInfo represents a system package or not.
-     * User-installed packages (Market or otherwise) should not be denoted as
-     * system packages.
-     * @param pkgInfo
-     * @return boolean
-     */
+//	/**
+//     * Return whether the given PackgeInfo represents a system package or not.
+//     * User-installed packages (Market or otherwise) should not be denoted as
+//     * system packages.
+//     * @param pkgInfo
+//     * @return boolean
+//     */
 //    private boolean isSystemPackage(PackageInfo pkgInfo) {
 //        return (((pkgInfo.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM) != 0)) ? true
 //                : false;
 //    }
     
-    private boolean zyngaAppOrNot(PackageInfo pkgInfo){
-    	PackageManager pm = getPackageManager();
-    	String zyngaApp = pkgInfo.packageName;
-    	String result = zyngaApp.substring(0, 9);
-    	boolean zyngaApp_installed = false;
-    	try{
-    		if (result.equals("com.zynga")){
-	    		pm.getPackageInfo(result, PackageManager.GET_ACTIVITIES);
-	    		zyngaApp_installed = true;
-    		}
-    	}catch (PackageManager.NameNotFoundException e){
-    		zyngaApp_installed = false;
-    	}
-    	return zyngaApp_installed;
-    }
+//    private boolean zyngaAppOrNot(PackageInfo pkgInfo){
+//    	PackageManager pm = getPackageManager();
+//    	String zyngaApp = pkgInfo.packageName;
+//    	String result = zyngaApp.substring(0, 9);
+//    	boolean zyngaApp_installed = false;
+//    	try{
+//    		if (result.equals("com.zynga")){
+//	    		pm.getPackageInfo(result, PackageManager.GET_ACTIVITIES);
+//	    		zyngaApp_installed = true;
+//    		}
+//    	}catch (PackageManager.NameNotFoundException e){
+//    		zyngaApp_installed = false;
+//    	}
+//    	return zyngaApp_installed;
+//    }
  
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position,

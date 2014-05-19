@@ -255,6 +255,70 @@
         android:textStyle="italic" />
 
     <TextView
+            android:id="@+id/vmheap_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/deviceSerial"
+            android:text="@string/vm_heap_size"
+            android:textStyle="bold" 
+            android:textSize="12sp"/>
+ 
+        <TextView
+            android:id="@+id/vmheap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vmheap_name"
+            android:textSize="10sp"/>
+        
+        <TextView
+            android:id="@+id/vmAllocated_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vmheap"
+            android:text="@string/allocated_vm_memory"
+            android:textStyle="bold" 
+            android:textSize="12sp"/>
+ 
+        <TextView
+            android:id="@+id/vmAllocated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vmAllocated_name"
+            android:textSize="10sp"/>
+        
+        <TextView
+            android:id="@+id/vmHeapLimit_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vmAllocated"
+            android:text="@string/vm_heap_size_limit"
+            android:textStyle="bold" 
+            android:textSize="12sp"/>
+ 
+        <TextView
+            android:id="@+id/vmHeapLimit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vmHeapLimit_name"
+            android:textSize="10sp"/>
+        
+        <TextView
+            android:id="@+id/nativeAllocatedMem_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vmHeapLimit"
+            android:text="@string/native_allocated_memory"
+            android:textStyle="bold" 
+            android:textSize="12sp"/>
+ 
+        <TextView
+            android:id="@+id/nativeAllocatedMem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nativeAllocatedMem_name" 
+            android:textSize="10sp"/> 
+    
+    <TextView
         android:id="@+id/GWPgkGames"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
