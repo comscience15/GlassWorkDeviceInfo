@@ -1,9 +1,12 @@
 package com.comscience15.glassworkdeviceinfo;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.nio.ByteBuffer;
 import java.text.SimpleDateFormat;
@@ -15,6 +18,7 @@ import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.ActivityManager;
+import android.app.ActivityManager.MemoryInfo;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.FeatureInfo;
@@ -51,7 +55,7 @@ import com.comscience15.glassworkdeviceinfo.app.AppData;
 public class ApkInfo extends Activity {
  
     private static final String ImageUtils = null;
-	TextView appLabel, packageName, version, features, permissions, andVersion, installed, lastModify, path;
+	TextView appLabel, packageName, version, features, permissions, andVersion, installed, lastModify, path, appMem_Name;
 //    ImageView appicon;
     PackageInfo packageInfo;
     PackageManager pm;
@@ -88,6 +92,7 @@ public class ApkInfo extends Activity {
         bResetBlob = (Button) findViewById(R.id.resetBlob);
         bEmailBlob = (Button) findViewById(R.id.emailBlob);
 //        bLSs = (Button) findViewById(R.id.lSS);
+        appMem_Name = (TextView) findViewById(R.id.appMem_Name);
     }
     
     @SuppressLint("NewApi")
@@ -124,6 +129,18 @@ public class ApkInfo extends Activity {
 //        else
 //            features.setText("-");
  
+        //set specific application memory usage
+//        String appName = (String) packageInfo.packageName;
+//		String cmd = "adb shell dumpsys meminfo " + appName;
+//		OutputStream process = null;
+//		try {
+//			process = Runtime.getRuntime().exec(cmd).getOutputStream();
+//		} catch(Exception e) {
+//			e.printStackTrace();
+//		}
+		Toast.makeText(ApkInfo.this, "REMINDER: dumpsys cannot be retrieved programmatically by a normal application. Unless your application is signed with a platform key or built as a system application, dumpsys information cannot be retrieved programmatically.", Toast.LENGTH_LONG).show();
+//		appMem_Name.setText(process.toString());
+        
         // uses-permission
         if (packageInfo.requestedPermissions != null)
             permissions

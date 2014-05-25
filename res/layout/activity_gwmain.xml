@@ -1,7 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:id="@+id/rlLayout"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -9,387 +9,387 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".GWMain" >
 
-    <TextView
-        android:id="@+id/showBrand"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Brand"
-        android:textSize="12sp"
-        android:textStyle="bold" />
+	    <TextView
+	        android:id="@+id/showBrand"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Brand"
+	        android:textSize="12sp"
+	        android:textStyle="bold" />
+	
+	    <TextView
+	        android:id="@+id/deviceBrand"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/showBrand"
+	        android:layout_alignParentLeft="true"
+	        android:textSize="10sp"
+	        android:textStyle="italic" />
+	
+	    <TextView
+	        android:id="@+id/showModel"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/deviceBrand"
+	        android:layout_alignParentLeft="true"
+	        android:text="Model"
+	        android:textSize="12sp"
+	        android:textStyle="bold" />
+	
+	    <TextView
+	        android:id="@+id/deviceModel"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/showModel"
+	        android:layout_alignParentLeft="true"
+	        android:textSize="10sp"
+	        android:textStyle="italic" />
+	
+	    <TextView
+	        android:id="@+id/showOS"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/deviceModel"
+	        android:layout_alignParentLeft="true"
+	        android:text="Android Version"
+	        android:textSize="12sp"
+	        android:textStyle="bold" />
+	
+	    <TextView
+	        android:id="@+id/deviceOS"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/showOS"
+	        android:layout_alignParentLeft="true"
+	        android:textSize="10sp"
+	        android:textStyle="italic" />
+	    
+	    <TextView
+	        android:id="@+id/showBoard"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/deviceOS"
+	        android:layout_alignParentLeft="true"
+	        android:text="Board"
+	        android:textSize="12sp"
+	        android:textStyle="bold" />
+	
+	    <TextView
+	        android:id="@+id/deviceBoard"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/showBoard"
+	        android:layout_alignParentLeft="true"
+	        android:textSize="10sp"
+	        android:textStyle="italic" />
+	    
+	    <TextView
+	        android:id="@+id/showBootLoader"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/deviceBoard"
+	        android:layout_alignParentLeft="true"
+	        android:text="Boot Loader"
+	        android:textSize="12sp"
+	        android:textStyle="bold" />
+	
+	    <TextView
+	        android:id="@+id/deviceBootLoader"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/showBootLoader"
+	        android:layout_alignParentLeft="true"
+	        android:textSize="10sp"
+	        android:textStyle="italic" />
+	    
+	    <TextView
+	        android:id="@+id/showCPUabi"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/deviceBootLoader"
+	        android:layout_alignParentLeft="true"
+	        android:text="CPU ABI"
+	        android:textSize="12sp"
+	        android:textStyle="bold"/>
+	
+	    <TextView
+	        android:id="@+id/deviceCPUabi"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/showCPUabi"
+	        android:layout_alignParentLeft="true"
+	        android:textSize="10sp"
+	        android:textStyle="italic" />
+	    
+	    <TextView
+	        android:id="@+id/showCPUabi2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/deviceCPUabi"
+	        android:layout_alignParentLeft="true"
+	        android:text="CPU ABI 2"
+	        android:textSize="12sp"
+	        android:textStyle="bold"/>
+	
+	    <TextView
+	        android:id="@+id/deviceCPUabi2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/showCPUabi2"
+	        android:layout_alignParentLeft="true"
+	        android:textSize="10sp"
+	        android:textStyle="italic" />
+	    
+	    <TextView
+	        android:id="@+id/showDisplay"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/deviceCPUabi2"
+	        android:layout_alignParentLeft="true"
+	        android:text="Display"
+	        android:textSize="12sp"
+	        android:textStyle="bold"/>
+	
+	    <TextView
+	        android:id="@+id/deviceDisplay"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/showDisplay"
+	        android:layout_alignParentLeft="true"
+	        android:textSize="10sp"
+	        android:textStyle="italic" />
+	    
+	    <TextView
+	        android:id="@+id/showGLRenderer"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/deviceDisplay"
+	        android:layout_alignParentLeft="true"
+	        android:text="GPU Renderer"
+	        android:textSize="12sp"
+	        android:textStyle="bold"/>
+	
+	    <TextView
+	        android:id="@+id/deviceGLRenderer"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/showGLRenderer"
+	        android:textSize="10sp"
+	        android:textStyle="italic" />
+	    
+	    <TextView
+	        android:id="@+id/showGLVendor"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/deviceGLRenderer"
+	        android:layout_alignParentLeft="true"
+	        android:text="GPU Vendor"
+	        android:textSize="12sp"
+	        android:textStyle="bold"/>
+	
+	    <TextView
+	        android:id="@+id/deviceGLVendor"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/showGLVendor"
+	        android:layout_alignParentLeft="true"
+	        android:textSize="10sp"
+	        android:textStyle="italic" />
+	    
+	    <TextView
+	        android:id="@+id/showGLVersion"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/deviceGLVendor"
+	        android:layout_alignParentLeft="true"
+	        android:text="GPU Version"
+	        android:textSize="12sp"
+	        android:textStyle="bold"/>
+	
+	    <TextView
+	        android:id="@+id/deviceGLVersion"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/showGLVersion"
+	        android:layout_alignParentLeft="true"
+	        android:textSize="10sp"
+	        android:textStyle="italic" />
+	    
+	  <!--  <TextView
+	        android:id="@+id/showGLExtension"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/deviceGLVersion"
+	        android:layout_alignParentLeft="true"
+	        android:text="GPU Extension"
+	        android:textSize="12sp"
+	        android:textStyle="bold"/>
+	
+	    <TextView
+	        android:id="@+id/deviceGLExtension"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/showGLExtension"
+	        android:layout_alignParentLeft="true"
+	        android:textSize="10sp"
+	        android:textStyle="italic" /> -->  
+	    
+	    <TextView
+	        android:id="@+id/showSerial"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/deviceGLVersion"
+	        android:layout_alignParentLeft="true"
+	        android:text="Serial Number"
+	        android:textSize="12sp"
+	        android:textStyle="bold"/>
+	
+	    <TextView
+	        android:id="@+id/deviceSerial"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/showSerial"
+	        android:layout_alignParentLeft="true"
+	        android:textSize="10sp"
+	        android:textStyle="italic" />
+	
+	    <TextView
+	        android:id="@+id/vmheap_name"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/deviceSerial"
+	        android:text="@string/vm_heap_size"
+	        android:textStyle="bold" 
+	        android:textSize="12sp"/>
+	 
+	    <TextView
+	        android:id="@+id/vmheap"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/vmheap_name"
+	        android:textSize="10sp"/>
+	        
+	    <TextView
+	        android:id="@+id/vmAllocated_name"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/vmheap"
+	        android:text="@string/allocated_vm_memory"
+	        android:textStyle="bold" 
+	        android:textSize="12sp"/>
+	 
+	    <TextView
+	        android:id="@+id/vmAllocated"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/vmAllocated_name"
+	        android:textSize="10sp"/>
+	        
+	    <TextView
+	        android:id="@+id/vmHeapLimit_name"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/vmAllocated"
+	        android:text="@string/vm_heap_size_limit"
+	        android:textStyle="bold" 
+	        android:textSize="12sp"/>
+	 
+	    <TextView
+	        android:id="@+id/vmHeapLimit"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/vmHeapLimit_name"
+	        android:textSize="10sp"/>
+	        
+	    <TextView
+	        android:id="@+id/nativeAllocatedMem_name"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/vmHeapLimit"
+	        android:text="@string/native_allocated_memory"
+	        android:textStyle="bold" 
+	        android:textSize="12sp"/>
+	 
+	    <TextView
+	        android:id="@+id/nativeAllocatedMem"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/nativeAllocatedMem_name" 
+	        android:textSize="10sp"/> 
+	    
+	    <TextView
+	        android:id="@+id/GWPgkGames"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/bShowLogcat"
+	        android:layout_centerHorizontal="true"
+	        android:textSize="12sp"
+	        android:textStyle="italic" /> 
+	
+	    <TextView
+	        android:id="@+id/showLogcat"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/GWPgkGames"
+	        android:layout_centerHorizontal="true"
+	        android:textSize="15sp"
+	        android:textStyle="bold" />
+	
+	    <TextView
+	        android:id="@+id/logcatFeed"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/showLogcat"
+	        android:layout_centerHorizontal="true"
+	        android:isScrollContainer="true"
+	        android:minHeight="200dp"
+	        android:textSize="9sp" />
+	    
+	    <TextView
+	        android:id="@+id/showGlassworkPgkNames"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:text="Installed Application list"
+	        android:textSize="15sp"
+	        android:textStyle="bold" />
+	    
+	    <ListView
+	        android:id="@+id/applist"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_above="@+id/bShowLogcat"
+	        android:layout_alignLeft="@+id/logcatFeed"
+	        android:layout_below="@+id/showGlassworkPgkNames" />
+	
+	    <Button
+	        android:id="@+id/bShowLogcat"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBottom="@+id/emailLogcat"
+	        android:onClick="logcatViewClick"
+	        android:text="Logcat Viewer" />
+	
+	    <Button
+	        android:id="@+id/emailLogcat"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_weight="0.97"
+	        android:onClick="sendEmailClick"
+	        android:text="Send Logcat" />
+	
+	   <!--  <Button
+	        android:id="@+id/displayZGames"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_above="@+id/bShowLogcat"
+	        android:layout_alignLeft="@+id/bShowLogcat"
+	        android:layout_alignRight="@+id/bShowLogcat"
+	        android:layout_weight="0.97"
+	        android:onClick="showZGames"
+	        android:text="Zynga List" /> --> 
 
-    <TextView
-        android:id="@+id/deviceBrand"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/showBrand"
-        android:layout_alignParentLeft="true"
-        android:textSize="10sp"
-        android:textStyle="italic" />
-
-    <TextView
-        android:id="@+id/showModel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/deviceBrand"
-        android:layout_alignParentLeft="true"
-        android:text="Model"
-        android:textSize="12sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/deviceModel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/showModel"
-        android:layout_alignParentLeft="true"
-        android:textSize="10sp"
-        android:textStyle="italic" />
-
-    <TextView
-        android:id="@+id/showOS"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/deviceModel"
-        android:layout_alignParentLeft="true"
-        android:text="Android Version"
-        android:textSize="12sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/deviceOS"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/showOS"
-        android:layout_alignParentLeft="true"
-        android:textSize="10sp"
-        android:textStyle="italic" />
-    
-    <TextView
-        android:id="@+id/showBoard"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/deviceOS"
-        android:layout_alignParentLeft="true"
-        android:text="Board"
-        android:textSize="12sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/deviceBoard"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/showBoard"
-        android:layout_alignParentLeft="true"
-        android:textSize="10sp"
-        android:textStyle="italic" />
-    
-    <TextView
-        android:id="@+id/showBootLoader"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/deviceBoard"
-        android:layout_alignParentLeft="true"
-        android:text="Boot Loader"
-        android:textSize="12sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/deviceBootLoader"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/showBootLoader"
-        android:layout_alignParentLeft="true"
-        android:textSize="10sp"
-        android:textStyle="italic" />
-    
-    <TextView
-        android:id="@+id/showCPUabi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/deviceBootLoader"
-        android:layout_alignParentLeft="true"
-        android:text="CPU ABI"
-        android:textSize="12sp"
-        android:textStyle="bold"/>
-
-    <TextView
-        android:id="@+id/deviceCPUabi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/showCPUabi"
-        android:layout_alignParentLeft="true"
-        android:textSize="10sp"
-        android:textStyle="italic" />
-    
-    <TextView
-        android:id="@+id/showCPUabi2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/deviceCPUabi"
-        android:layout_alignParentLeft="true"
-        android:text="CPU ABI 2"
-        android:textSize="12sp"
-        android:textStyle="bold"/>
-
-    <TextView
-        android:id="@+id/deviceCPUabi2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/showCPUabi2"
-        android:layout_alignParentLeft="true"
-        android:textSize="10sp"
-        android:textStyle="italic" />
-    
-    <TextView
-        android:id="@+id/showDisplay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/deviceCPUabi2"
-        android:layout_alignParentLeft="true"
-        android:text="Display"
-        android:textSize="12sp"
-        android:textStyle="bold"/>
-
-    <TextView
-        android:id="@+id/deviceDisplay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/showDisplay"
-        android:layout_alignParentLeft="true"
-        android:textSize="10sp"
-        android:textStyle="italic" />
-    
-    <TextView
-        android:id="@+id/showGLRenderer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/deviceDisplay"
-        android:layout_alignParentLeft="true"
-        android:text="GPU Renderer"
-        android:textSize="12sp"
-        android:textStyle="bold"/>
-
-    <TextView
-        android:id="@+id/deviceGLRenderer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/showGLRenderer"
-        android:textSize="10sp"
-        android:textStyle="italic" />
-    
-    <TextView
-        android:id="@+id/showGLVendor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/deviceGLRenderer"
-        android:layout_alignParentLeft="true"
-        android:text="GPU Vendor"
-        android:textSize="12sp"
-        android:textStyle="bold"/>
-
-    <TextView
-        android:id="@+id/deviceGLVendor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/showGLVendor"
-        android:layout_alignParentLeft="true"
-        android:textSize="10sp"
-        android:textStyle="italic" />
-    
-    <TextView
-        android:id="@+id/showGLVersion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/deviceGLVendor"
-        android:layout_alignParentLeft="true"
-        android:text="GPU Version"
-        android:textSize="12sp"
-        android:textStyle="bold"/>
-
-    <TextView
-        android:id="@+id/deviceGLVersion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/showGLVersion"
-        android:layout_alignParentLeft="true"
-        android:textSize="10sp"
-        android:textStyle="italic" />
-    
-  <!--  <TextView
-        android:id="@+id/showGLExtension"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/deviceGLVersion"
-        android:layout_alignParentLeft="true"
-        android:text="GPU Extension"
-        android:textSize="12sp"
-        android:textStyle="bold"/>
-
-    <TextView
-        android:id="@+id/deviceGLExtension"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/showGLExtension"
-        android:layout_alignParentLeft="true"
-        android:textSize="10sp"
-        android:textStyle="italic" /> -->  
-    
-    <TextView
-        android:id="@+id/showSerial"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/deviceGLVersion"
-        android:layout_alignParentLeft="true"
-        android:text="Serial Number"
-        android:textSize="12sp"
-        android:textStyle="bold"/>
-
-    <TextView
-        android:id="@+id/deviceSerial"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/showSerial"
-        android:layout_alignParentLeft="true"
-        android:textSize="10sp"
-        android:textStyle="italic" />
-
-    <TextView
-            android:id="@+id/vmheap_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/deviceSerial"
-            android:text="@string/vm_heap_size"
-            android:textStyle="bold" 
-            android:textSize="12sp"/>
- 
-        <TextView
-            android:id="@+id/vmheap"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/vmheap_name"
-            android:textSize="10sp"/>
-        
-        <TextView
-            android:id="@+id/vmAllocated_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/vmheap"
-            android:text="@string/allocated_vm_memory"
-            android:textStyle="bold" 
-            android:textSize="12sp"/>
- 
-        <TextView
-            android:id="@+id/vmAllocated"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/vmAllocated_name"
-            android:textSize="10sp"/>
-        
-        <TextView
-            android:id="@+id/vmHeapLimit_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/vmAllocated"
-            android:text="@string/vm_heap_size_limit"
-            android:textStyle="bold" 
-            android:textSize="12sp"/>
- 
-        <TextView
-            android:id="@+id/vmHeapLimit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/vmHeapLimit_name"
-            android:textSize="10sp"/>
-        
-        <TextView
-            android:id="@+id/nativeAllocatedMem_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/vmHeapLimit"
-            android:text="@string/native_allocated_memory"
-            android:textStyle="bold" 
-            android:textSize="12sp"/>
- 
-        <TextView
-            android:id="@+id/nativeAllocatedMem"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/nativeAllocatedMem_name" 
-            android:textSize="10sp"/> 
-    
-    <TextView
-        android:id="@+id/GWPgkGames"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/bShowLogcat"
-        android:layout_centerHorizontal="true"
-        android:textSize="12sp"
-        android:textStyle="italic" /> 
-
-    <TextView
-        android:id="@+id/showLogcat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/GWPgkGames"
-        android:layout_centerHorizontal="true"
-        android:textSize="15sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/logcatFeed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/showLogcat"
-        android:layout_centerHorizontal="true"
-        android:isScrollContainer="true"
-        android:minHeight="200dp"
-        android:textSize="9sp" />
-    
-    <TextView
-        android:id="@+id/showGlassworkPgkNames"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:text="Installed Application list"
-        android:textSize="15sp"
-        android:textStyle="bold" />
-    
-    <ListView
-        android:id="@+id/applist"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/bShowLogcat"
-        android:layout_alignLeft="@+id/logcatFeed"
-        android:layout_below="@+id/showGlassworkPgkNames" />
-
-    <Button
-        android:id="@+id/bShowLogcat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/emailLogcat"
-        android:onClick="logcatViewClick"
-        android:text="Logcat Viewer" />
-
-    <Button
-        android:id="@+id/emailLogcat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_weight="0.97"
-        android:onClick="sendEmailClick"
-        android:text="Send Logcat" />
-
-   <!--  <Button
-        android:id="@+id/displayZGames"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/bShowLogcat"
-        android:layout_alignLeft="@+id/bShowLogcat"
-        android:layout_alignRight="@+id/bShowLogcat"
-        android:layout_weight="0.97"
-        android:onClick="showZGames"
-        android:text="Zynga List" /> --> 
-
-</RelativeLayout>
+     </RelativeLayout>

@@ -37,6 +37,16 @@
         </activity>
         
         <activity
+            android:name=".AboutUs"
+            android:label="@string/app_name" 
+            android:theme="@android:style/Theme.Dialog" >
+            <intent-filter> 
+                <action android:name="com.comscience15.glassworkdeviceinfo.AboutUs" />
+                <category android:name="android.intent.category.DEFAULT"  />              
+            </intent-filter>       
+        </activity>
+        
+        <activity
             android:name=".sendEmail"
             android:label="@string/app_name" >
             <intent-filter>

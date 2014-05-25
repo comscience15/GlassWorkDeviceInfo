@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <TextView 
+        android:layout_height="wrap_content"
+        android:text="GlassworkDeviceInfo app is developed by Nat Srileeannop. \n\nThis app will help all Zynga QA will be able to get more application testing data and useful for bug opening. \n\nPlease feel free to contact me for any feedback \nnsrileeannop@zynga.com"
+        android:layout_width="wrap_content"
+        android:id="@+id/aboutUsTV" ></TextView>
+</RelativeLayout>

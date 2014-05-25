@@ -22,6 +22,7 @@ import android.os.Debug;
 import android.text.method.ArrowKeyMovementMethod;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -250,6 +251,18 @@ public class SplashScreen extends Activity implements OnItemClickListener{
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.gwmain, menu);
 		return true;
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// TODO Auto-generated method stub
+		switch (item.getItemId()){
+		case R.id.aboutUs:
+			Intent i = new Intent(this, AboutUs.class);
+			startActivity(i);
+			break;
+		}
+		return false;
 	}
 
 	@Override

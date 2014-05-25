@@ -179,6 +179,28 @@
             android:paddingLeft="24dp" 
             android:textSize="12sp"/>
         
+        <TextView
+            android:id="@+id/appMem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/last_modify"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="18dp"
+            android:text="@string/appMem"
+            android:textStyle="bold" 
+            android:textSize="15sp"/>
+ 
+        <TextView
+            android:id="@+id/appMem_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appMem"
+            android:paddingLeft="24dp" 
+            android:textSize="12sp"/>
+        
+        
+        
+        
         <Button
             android:id="@+id/lApp"
             style="?android:attr/buttonStyleSmall"
